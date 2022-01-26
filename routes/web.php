@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about','homeController@about')->name('about');
+Route::get('/contact','homeController@contact')->name('contact');
+Route::get('/movielist','homeController@movielist')->name('movielist');
+
+Route::get('/moviedetail','homeController@moviedetail')->name('moviedetail');
+Route::get('/moviecheckout','homeController@moviecheckout')->name('moviecheckout');
