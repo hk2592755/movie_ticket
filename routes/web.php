@@ -23,3 +23,7 @@ Route::get('/movielist','homeController@movielist')->name('movielist');
 
 Route::get('/moviedetail','homeController@moviedetail')->name('moviedetail');
 Route::get('/moviecheckout','homeController@moviecheckout')->name('moviecheckout');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

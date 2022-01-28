@@ -138,7 +138,7 @@
                         <a href="contact.html">contact</a>
                     </li>
                     <li class="header-button pr-0">
-                        <a href="sign-up.html">join us</a>
+                        <a href="{{route('register')}}">join us</a>
                     </li>
                 </ul>
                 <div class="header-bar d-lg-none">
