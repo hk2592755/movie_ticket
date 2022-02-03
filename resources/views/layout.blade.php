@@ -75,53 +75,15 @@
 
                         </ul>
                     </li>
-                    {{-- <li>
-                        <a href="#0">events</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="events.html">Events</a>
-                            </li>
-                            <li>
-                                <a href="event-details.html">Event Details</a>
-                            </li>
-                            <li>
-                                <a href="event-speaker.html">Event Speaker</a>
-                            </li>
-                            <li>
-                                <a href="event-ticket.html">Event Ticket</a>
-                            </li>
-                            <li>
-                                <a href="event-checkout.html">Event Checkout</a>
-                            </li>
-                        </ul>
-                    </li> --}}
-                    <li>
-                        <a href="#0">sports</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="sports.html">Sports</a>
-                            </li>
-                            <li>
-                                <a href="sport-details.html">Sport Details</a>
-                            </li>
-                            <li>
-                                <a href="sports-ticket.html">Sport Ticket</a>
-                            </li>
-                            <li>
-                                <a href="sports-checkout.html">Sport Checkout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
+
+
 
                         <ul class="">
                             <li>
                                 <a href="about.html">About Us</a>
                             </li>
 
-
-
-                        </ul>
+                         </ul>
                     </li>
                     <li>
                         <a href="#0">blog</a>
@@ -137,10 +99,31 @@
                     <li>
                         <a href="contact.html">contact</a>
                     </li>
+                    @auth
+                    <li class="header-button pr-0">
+                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                {{ __('Profile') }}
+                            </x-jet-dropdown-link>
+                    </li>
+                    <li class="header-button pr-0">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-dropdown-link>
+                </form>
+                    </li>
+
+                    @else
                     <li class="header-button pr-0">
                         <a href="{{route('register')}}">join us</a>
                     </li>
+                    @endauth
                 </ul>
+
                 <div class="header-bar d-lg-none">
 					<span></span>
 					<span></span>

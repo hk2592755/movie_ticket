@@ -14,8 +14,7 @@
             <h1 class="title  cd-headline clip"><span class="d-block">book your</span> tickets for
                 <span class="color-theme cd-words-wrapper p-0 m-0">
                     <b class="is-visible">Movie</b>
-                    <b>Event</b>
-                    <b>Sport</b>
+
                 </span>
             </h1>
             <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
@@ -71,13 +70,12 @@
                             </div>
                             <span class="type">city</span>
                             <select class="select-bar">
-                                <option value="london">London</option>
-                                <option value="dhaka">dhaka</option>
-                                <option value="rosario">rosario</option>
-                                <option value="madrid">madrid</option>
-                                <option value="koltaka">kolkata</option>
-                                <option value="rome">rome</option>
-                                <option value="khoksa">khoksa</option>
+                                <option value="">Karachi</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Faislabad">Faislabad</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Quetta">Quetta</option>
+
                             </select>
                         </div>
                         <div class="form-group">
@@ -86,10 +84,10 @@
                             </div>
                             <span class="type">date</span>
                             <select class="select-bar">
-                                <option value="26-12-19">23/10/2020</option>
-                                <option value="26-12-19">24/10/2020</option>
-                                <option value="26-12-19">25/10/2020</option>
-                                <option value="26-12-19">26/10/2020</option>
+                                <option value="26-12-19">23/1/2022</option>
+                                <option value="26-12-19">24/2/2022</option>
+                                <option value="26-12-19">25/3/2022</option>
+                                <option value="26-12-19">26/2/2022</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -98,13 +96,11 @@
                             </div>
                             <span class="type">cinema</span>
                             <select class="select-bar">
-                                <option value="Awaken">Awaken</option>
-                                <option value="dhaka">dhaka</option>
-                                <option value="rosario">rosario</option>
-                                <option value="madrid">madrid</option>
-                                <option value="koltaka">kolkata</option>
-                                <option value="rome">rome</option>
-                                <option value="khoksa">khoksa</option>
+                                <option value="Nueplex Cinemas">Nueplex Cinemas</option>
+                                <option value="Cineplex Cinema">Cineplex Cinema</option>
+                                <option value="Cinepax">Cinepax</option>
+                                <option value="Cinegold Plex">Cinegold Plex</option>
+
                             </select>
                         </div>
                     </form>
@@ -293,8 +289,8 @@
             <div class="col-lg-9">
                 <div class="article-section padding-bottom">
                     <div class="section-header-1">
-                        <h2 class="title">movies</h2>
-                        <a class="view-all" href="movie-grid.html">View All</a>
+                        <h2 class="title">Trending Searches</h2>
+                        <a class="view-all" href="/movielist">View All</a>
                     </div>
                     <div class="row mb-30-none justify-content-center">
                         <div class="col-sm-6 col-lg-4">
