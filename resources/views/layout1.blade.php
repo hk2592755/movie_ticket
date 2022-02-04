@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin</title>
     <!-- Favicons -->
-  <link href="{{asset('assets/admin_panel/img/favicon.png')}}" rel="icon">
-  <link href="{{asset('assets/admin_panel/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  {{-- <link href="{{asset('assets/admin_panel/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('assets/admin_panel/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('assets/admin_panel/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -197,7 +197,20 @@
         </div>
         <div class="top-menu">
           <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="login.html">Logout</a></li>
+            <li>
+                <form class="logout" method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-dropdown-link>
+                </form>
+
+                {{-- <a class="logout" href=""></a> --}}
+
+            </li>
           </ul>
         </div>
       </header>
@@ -209,7 +222,11 @@
     <div id="sidebar" class="nav-collapse ">
       <!-- sidebar menu start-->
       <ul class="sidebar-menu" id="nav-accordion">
-        <p class="centered"><a href="profile.html"><img src="{{asset('assets/admin_panel/img/ui-sam.jpg')}}" class="img-circle" width="80"></a></p>
+        <p class="centered"><a href="profile.html"></a>
+            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+            </button>
+        </p>
         <h5 class="centered">Hussain Khan</h5>
         <li class="mt">
           <a class="active" href="index.html">
