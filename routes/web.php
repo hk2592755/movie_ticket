@@ -30,3 +30,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
 
 
 Route::get('redirects','MovieController@index')->name('admin');
+
+Route::get('/add','MovieController@add')->name('/add');
+Route::post('/create','MovieController@create')->name('/create');

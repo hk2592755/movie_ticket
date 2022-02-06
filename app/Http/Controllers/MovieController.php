@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +28,13 @@ class MovieController extends Controller
         }
 
 
+
+
+    }
+
+    public function add()
+    {
+        return view('/add');
     }
 
     /**
@@ -34,9 +42,35 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $movie = new Movie;
+
+        $movie->name = $request->input('name');
+        $movie->year = $request->input('year');
+        $movie->genre = $request->input('genre');
+        $movie->date = $request->input('date');
+
+        if($request->hasFile('file_path'))
+          {
+             $file = $request->file('file_path');
+             $extension = $file->getClientOriginalExtension();
+             $filename = time().'.'.$extension;
+             $file->move('uploads',$filename);
+             $movie->file_path = $filename;
+          }
+        $movie->save();
+
+        return redirect()->back()->with('success','Data Has been Inserted');
+
+
+    }
+
+    public function save()
+    {
+        //
+
     }
 
     /**
@@ -45,9 +79,11 @@ class MovieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+
+
+
     }
 
     /**

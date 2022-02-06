@@ -223,28 +223,23 @@
       <!-- sidebar menu start-->
       <ul class="sidebar-menu" id="nav-accordion">
         <p class="centered"><a href="profile.html"></a>
-            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+            {{-- <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                 <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-            </button>
+            </button> --}}
         </p>
         <h5 class="centered">Hussain Khan</h5>
         <li class="mt">
-          <a class="active" href="index.html">
+          <a class="" href="{{route('admin')}}">
             <i class="fa fa-dashboard"></i>
             <span>Dashboard</span>
             </a>
         </li>
         <li class="sub-menu">
-          <a href="javascript:;">
+          <a href="{{route('/add')}}">
             <i class="fa fa-plus"></i>
             <span>Create</span>
             </a>
-          <ul class="sub">
-            <li><a href="general.html">General</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
-            <li><a href="panels.html">Panels</a></li>
-            <li><a href="font_awesome.html">Font Awesome</a></li>
-          </ul>
+
         </li>
         <li class="sub-menu">
           <a href="javascript:;">
@@ -348,12 +343,12 @@
 
 
 
-                @yield('content')
 
+  @yield('content')
                 <footer class="site-footer">
                     <div class="text-center">
                       <p>
-                        &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+                        &copy; Copyrights <strong>BoLeto</strong>. All Rights Reserved
                       </p>
                       <div class="credits">
 
@@ -363,6 +358,7 @@
                         </a>
                     </div>
                   </footer>
+
 
 
 
