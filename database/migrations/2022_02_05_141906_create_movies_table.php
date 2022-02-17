@@ -18,8 +18,12 @@ class CreateMoviesTable extends Migration
             $table->string('name');
             $table->string('year');
             $table->string('genre');
+            $table->string('cinema');
             $table->string('date');
+            $table->string('time');
             $table->string('file_path');
+            $table->string('trailer_path');
+
 
 
 

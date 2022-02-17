@@ -15,7 +15,8 @@ class Movie extends Model
         'year',
         'genre',
         'date',
-        'file_path'
+        'file_path',
+        'trailer_path'
 
 
     ];

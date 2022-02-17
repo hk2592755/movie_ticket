@@ -5,28 +5,30 @@
 @section('main')
 
 <!-- ==========Banner-Section========== -->
-<section class="details-banner bg_img" data-background="assets/images/banner/banner03.jpg">
+
+
+
+
+
+<section class="details-banner bg_img" data-background="{{asset('uploads/' . $data->file_path)}}">
     <div class="container">
         <div class="details-banner-wrapper">
             <div class="details-banner-thumb">
-                <img src="assets/images/movie/venus.jpg" alt="movie">
-                <a href="https://www.youtube.com/embed/KGeBMAgc46E" class="video-popup">
-                    <img src="assets/images/movie/video-button.png" alt="movie">
+                <img src="{{asset('uploads/' . $data->file_path)}}" alt="movie">
+                <a href="{{asset('uploads/trailers/' . $data->trailer_path)}}" class="video-popup">
+                    <img src="{{asset('uploads/' . $data->file_path)}}" alt="movie">
                 </a>
             </div>
             <div class="details-banner-content offset-lg-3">
-                <h3 class="title">Venus</h3>
+                <h3 class="title">{{$data->name}}</h3>
                 <div class="tags">
-                    <a href="#0">English</a>
-                    <a href="#0">Hindi</a>
-                    <a href="#0">Telegu</a>
-                    <a href="#0">Tamil</a>
+
                 </div>
-                <a href="#0" class="button">horror</a>
+                <a href="#0" class="button">{{$data->genre}}</a>
                 <div class="social-and-duration">
                     <div class="duration-area">
                         <div class="item">
-                            <i class="fas fa-calendar-alt"></i><span>06 Dec, 2020</span>
+                            <i class="fas fa-calendar-alt"></i><span></span>
                         </div>
                         <div class="item">
                             <i class="far fa-clock"></i><span>2 hrs 50 mins</span>
@@ -45,6 +47,7 @@
 
     </div>
 </section>
+
 <!-- ==========Banner-Section========== -->
 
 <!-- ==========Book-Section========== -->
@@ -55,7 +58,7 @@
                 <div class="item">
                     <div class="item-header">
                         <div class="thumb">
-                            <img src="assets/images/movie/tomato2.png" alt="movie">
+                            <img src="{{asset('assets/images/movie/tomato2.png')}}" alt="movie">
                         </div>
                         <div class="counter-area">
                             <span class="counter-item odometer" data-odometer-final="88">0</span>
@@ -66,7 +69,7 @@
                 <div class="item">
                     <div class="item-header">
                         <div class="thumb">
-                            <img src="assets/images/movie/cake2.png" alt="movie">
+                            <img src="{{asset('assets/images/movie/cake2.png')}}" alt="movie">
                         </div>
                         <div class="counter-area">
                             <span class="counter-item odometer" data-odometer-final="88">0</span>
@@ -101,10 +104,11 @@
                     <p><a href="#0">Rate It</a></p>
                 </div>
             </div>
-            <a href="#0" class="custom-button">book tickets</a>
+            <a href={{route('seatplan')}} class="custom-button">book tickets</a>
         </div>
     </div>
 </section>
+
 <!-- ==========Book-Section========== -->
 
 <!-- ==========Movie-Section========== -->
@@ -130,7 +134,7 @@
                     <div class="offer-body">
                         <div class="offer-item">
                             <div class="thumb">
-                                <img src="assets/images/sidebar/offer01.png" alt="sidebar">
+                                <img src="{{asset('assets/images/sidebar/offer01.png')}}" alt="sidebar">
                             </div>
                             <div class="content">
                                 <h6>
@@ -141,7 +145,7 @@
                         </div>
                         <div class="offer-item">
                             <div class="thumb">
-                                <img src="assets/images/sidebar/offer02.png" alt="sidebar">
+                                <img src="{{asset('assets/images/sidebar/offer02.png')}}" alt="sidebar">
                             </div>
                             <div class="content">
                                 <h6>
@@ -153,7 +157,7 @@
                         </div>
                         <div class="offer-item">
                             <div class="thumb">
-                                <img src="assets/images/sidebar/offer03.png" alt="sidebar">
+                                <img src="{{asset('assets/images/sidebar/offer02.png')}}" alt="sidebar">
                             </div>
                             <div class="content">
                                 <h6>
@@ -168,7 +172,7 @@
                 <div class="widget-1 widget-banner">
                     <div class="widget-1-body">
                         <a href="#0">
-                            <img src="assets/images/sidebar/banner/banner01.jpg" alt="banner">
+                            <img src="{{asset('assets/images/sidebar/banner/banner01.jpg')}}" alt="banner">
                         </a>
                     </div>
                 </div>

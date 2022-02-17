@@ -33,3 +33,15 @@ Route::get('redirects','MovieController@index')->name('admin');
 
 Route::get('/add','MovieController@add')->name('/add');
 Route::post('/create','MovieController@create')->name('/create');
+Route::get('show','MovieController@show')->name('show');
+Route::get('/delete/{id}','MovieController@delete')->name('delete');
+///------Customer-------////
+
+Route::get('/about','Customercontroller@about')->name('about');
+ Route::get('/contact','Customercontroller@contact')->name('contact');
+ Route::get('/movielist','Customercontroller@movielist')->name('movielist');
+Route::get('/moviedetail/{id}','Customercontroller@moviedetail')->name('moviedetail');
+Route::get('/ticketplan','Customercontroller@ticketplan')->name('ticketplan');
+Route::get('/moviecheckout','Customercontroller@moviecheckout')->name('moviecheckout');
+Route::get('/seatplan','Customercontroller@seatplan')->name('seatplan');
+

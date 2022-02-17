@@ -290,13 +290,13 @@
                 <div class="article-section padding-bottom">
                     <div class="section-header-1">
                         <h2 class="title">Trending Searches</h2>
-                        <a class="view-all" href="/movielist">View All</a>
+                        <a class="view-all" href={{route('movielist')}}>View All</a>
                     </div>
                     <div class="row mb-30-none justify-content-center">
                         <div class="col-sm-6 col-lg-4">
                             <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
+                                    <a href="{{route('movielist')}}">
                                         <img src="assets/images/movie/movie01.jpg" alt="movie">
                                     </a>
                                 </div>
@@ -324,7 +324,7 @@
                         <div class="col-sm-6 col-lg-4">
                             <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
+                                    <a href="{{route('movielist')}}">
                                         <img src="assets/images/movie/movie02.jpg" alt="movie">
                                     </a>
                                 </div>
@@ -352,7 +352,7 @@
                         <div class="col-sm-6 col-lg-4">
                             <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
+                                    <a href="{{route('movielist')}}">
                                         <img src="assets/images/movie/movie03.jpg" alt="movie">
                                     </a>
                                 </div>
@@ -381,70 +381,91 @@
                 </div>
                 <div class="article-section padding-bottom">
                     <div class="section-header-1">
-                        <h2 class="title">events</h2>
-                        <a class="view-all" href="events.html">View All</a>
+                        <h2 class="title">MOST POPULAR</h2>
+                        <a class="view-all" href="{{route('movielist')}}">View All</a>
                     </div>
                     <div class="row mb-30-none justify-content-center">
                         <div class="col-sm-6 col-lg-4">
-                            <div class="event-grid">
+                            <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
-                                        <img src="assets/images/event/event01.jpg" alt="event">
+                                    <a href="{{route('movielist')}}">
+                                        <img src="{{asset('assets/images/thumbimg/download.jpg')}}" alt="movie">
                                     </a>
-                                    <div class="event-date">
-                                        <h6 class="date-title">28</h6>
-                                        <span>Dec</span>
-                                    </div>
                                 </div>
                                 <div class="movie-content bg-one">
                                     <h5 class="title m-0">
-                                        <a href="#0">Digital Economy Conference 2020</a>
+                                        <a href="#0">Black Panther</a>
                                     </h5>
-                                    <div class="movie-rating-percent">
-                                        <span>327 Montague Street</span>
-                                    </div>
+                                    <ul class="movie-rating-percent">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/tomato.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/cake.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
-                            <div class="event-grid">
+                            <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
-                                        <img src="assets/images/event/event02.jpg" alt="event">
+                                    <a href="{{route('movielist')}}">
+                                        <img src="{{asset(asset('assets/images/thumbimg/toystory.jpeg'))}}" alt="movie">
                                     </a>
-                                    <div class="event-date">
-                                        <h6 class="date-title">28</h6>
-                                        <span>Dec</span>
-                                    </div>
                                 </div>
                                 <div class="movie-content bg-one">
                                     <h5 class="title m-0">
-                                        <a href="#0">web design conference 2020</a>
+                                        <a href="#0">Toy Story</a>
                                     </h5>
-                                    <div class="movie-rating-percent">
-                                        <span>327 Montague Street</span>
-                                    </div>
+                                    <ul class="movie-rating-percent">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/tomato.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/cake.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
-                            <div class="event-grid">
+                            <div class="movie-grid">
                                 <div class="movie-thumb c-thumb">
-                                    <a href="#0">
-                                        <img src="assets/images/event/event03.jpg" alt="event">
+                                    <a href="{{route('movielist')}}">
+                                        <img src="{{asset('assets/images/thumbimg/soul.jpg')}}" alt="movie">
                                     </a>
-                                    <div class="event-date">
-                                        <h6 class="date-title">28</h6>
-                                        <span>Dec</span>
-                                    </div>
                                 </div>
                                 <div class="movie-content bg-one">
                                     <h5 class="title m-0">
-                                        <a href="#0">digital thinkers meetup</a>
+                                        <a href="#0">Soul</a>
                                     </h5>
-                                    <div class="movie-rating-percent">
-                                        <span>327 Montague Street</span>
-                                    </div>
+                                    <ul class="movie-rating-percent">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/tomato.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="assets/images/movie/cake.png" alt="movie">
+                                            </div>
+                                            <span class="content">88%</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

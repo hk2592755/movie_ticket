@@ -29,7 +29,6 @@ class MovieController extends Controller
 
 
 
-
     }
 
     public function add()
@@ -50,7 +49,10 @@ class MovieController extends Controller
         $movie->name = $request->input('name');
         $movie->year = $request->input('year');
         $movie->genre = $request->input('genre');
+        $movie->cinema = $request->input('cinema');
         $movie->date = $request->input('date');
+        $movie->time = $request->input('time');
+
 
         if($request->hasFile('file_path'))
           {
@@ -60,9 +62,19 @@ class MovieController extends Controller
              $file->move('uploads',$filename);
              $movie->file_path = $filename;
           }
+
+          if($request->hasFile('trailer_path'))
+          {
+             $file = $request->file('trailer_path');
+             $extension = $file->getClientOriginalExtension();
+             $filename = time().'.'.$extension;
+             $file->move('uploads/trailers',$filename);
+             $movie->trailer_path = $filename;
+          }
         $movie->save();
 
-        return redirect()->back()->with('success','Data Has been Inserted');
+
+        return redirect('show');
 
 
     }
@@ -92,9 +104,13 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+
+        $fetch=Movie::all();
+        //dd($fetch);
+        return view('show',['data'=>$fetch]);
+
     }
 
     /**
@@ -105,7 +121,7 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -117,8 +133,9 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+
+
+        }
 
     /**
      * Remove the specified resource from storage.
@@ -126,8 +143,11 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Movie $fetch,$id)
     {
-        //
+        $fetch=Movie::find($id);
+        $fetch->delete();
+        return redirect('show');
+
     }
 }

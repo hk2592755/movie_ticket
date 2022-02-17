@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
@@ -80,7 +81,7 @@
 
                         <ul class="">
                             <li>
-                                <a href="about.html">About Us</a>
+                                <a href={{route('about')}}>About Us</a>
                             </li>
 
                          </ul>
@@ -89,7 +90,7 @@
                         <a href="#0">blog</a>
                         <ul class="submenu">
                             <li>
-                                <a href="blog.html">Blog</a>
+                                <a href="">Blog</a>
                             </li>
                             <li>
                                 <a href="blog-details.html">Blog Single</a>
@@ -97,7 +98,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">contact</a>
+                        <a href={{route('contact')}}>contact</a>
                     </li>
                     @auth
                     <li class="header-button pr-0">
@@ -245,5 +246,6 @@
     <script src="{{asset('assets/js/viewport.jquery.js')}}"></script>
     <script src="{{asset('assets/js/nice-select.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
+
 </body>
 </html>
