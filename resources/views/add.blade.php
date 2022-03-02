@@ -15,10 +15,7 @@
             <h3 class="mb"><i class="fa fa-plus"></i>Movies</h3>
             <form class="form-horizontal style-form" method="POST" action="{{route('/create')}}" enctype="multipart/form-data">
                 @csrf
-                @if (session('status'))
-                <h6 class="alert alert-success">{{session()}}</h6>
 
-              @endif
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">

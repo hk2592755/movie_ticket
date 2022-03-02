@@ -104,7 +104,7 @@
                     <p><a href="#0">Rate It</a></p>
                 </div>
             </div>
-            <a href={{route('seatplan')}} class="custom-button">book tickets</a>
+            <a href="/seatplan/{{$data->id}}" class="custom-button">book tickets</a>
         </div>
     </div>
 </section>
@@ -182,33 +182,33 @@
                     <h3 class="title">photos</h3>
                     <div class="details-photos owl-carousel">
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details01.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details01.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img5.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img5.jpg')}}" alt="movie">
                             </a>
                         </div>
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details02.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details02.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img7.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img7.jpg')}}" alt="movie">
                             </a>
                         </div>
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details03.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details03.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img3.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img3.jpg')}}" alt="movie">
                             </a>
                         </div>
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details01.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details01.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img4.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img4.jpg')}}" alt="movie">
                             </a>
                         </div>
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details02.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details02.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img5.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img5.jpg')}}" alt="movie">
                             </a>
                         </div>
                         <div class="thumb">
-                            <a href="assets/images/movie/movie-details03.jpg" class="img-pop">
-                                <img src="assets/images/movie/movie-details03.jpg" alt="movie">
+                            <a href="{{asset('assets/images/client/img7.jpg')}}" class="img-pop">
+                                <img src="{{asset('assets/images/client/img7.jpg')}}" alt="movie">
                             </a>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast01.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast01.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -251,7 +251,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast02.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast01.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -263,7 +263,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast03.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast01.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -275,7 +275,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast04.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast01.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -298,7 +298,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast05.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast05.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -309,7 +309,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast06.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast06.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -320,7 +320,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast07.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast07.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -331,7 +331,7 @@
                                         <div class="cast-item">
                                             <div class="cast-thumb">
                                                 <a href="#0">
-                                                    <img src="assets/images/cast/cast08.jpg" alt="cast">
+                                                    <img src="{{asset('assets/images/cast/cast08.jpg')}}" alt="cast">
                                                 </a>
                                             </div>
                                             <div class="cast-content">
@@ -347,7 +347,7 @@
                                     <div class="author">
                                         <div class="thumb">
                                             <a href="#0">
-                                                <img src="assets/images/cast/cast02.jpg" alt="cast">
+                                                <img src="{{asset('assets/images/cast/cast02.jpg')}}" alt="cast">
                                             </a>
                                         </div>
                                         <div class="movie-review-info">
@@ -383,7 +383,7 @@
                                     <div class="author">
                                         <div class="thumb">
                                             <a href="#0">
-                                                <img src="assets/images/cast/cast04.jpg" alt="cast">
+                                                <img src="{{asset('assets/images/cast/cast04.jpg')}}" alt="cast">
                                             </a>
                                         </div>
                                         <div class="movie-review-info">
@@ -419,7 +419,7 @@
                                     <div class="author">
                                         <div class="thumb">
                                             <a href="#0">
-                                                <img src="assets/images/cast/cast01.jpg" alt="cast">
+                                                <img src="{{asset('assets/images/cast/cast01.jpg')}}" alt="cast">
                                             </a>
                                         </div>
                                         <div class="movie-review-info">
@@ -455,7 +455,7 @@
                                     <div class="author">
                                         <div class="thumb">
                                             <a href="#0">
-                                                <img src="assets/images/cast/cast03.jpg" alt="cast">
+                                                <img src="{{asset('assets/images/cast/cast03.jpg')}}" alt="cast">
                                             </a>
                                         </div>
                                         <div class="movie-review-info">

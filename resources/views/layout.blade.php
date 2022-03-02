@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
@@ -101,11 +102,11 @@
                         <a href={{route('contact')}}>contact</a>
                     </li>
                     @auth
-                    <li class="header-button pr-0">
+                    {{-- <li class="header-button pr-0">
                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
-                    </li>
+                    </li> --}}
                     <li class="header-button pr-0">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

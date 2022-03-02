@@ -15,6 +15,7 @@ class MovieController extends Controller
      */
     public function index()
     {
+
         $role=Auth::user()->role;
 
         if($role=="1" )

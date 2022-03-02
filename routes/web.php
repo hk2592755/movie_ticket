@@ -41,7 +41,9 @@ Route::get('/about','Customercontroller@about')->name('about');
  Route::get('/contact','Customercontroller@contact')->name('contact');
  Route::get('/movielist','Customercontroller@movielist')->name('movielist');
 Route::get('/moviedetail/{id}','Customercontroller@moviedetail')->name('moviedetail');
-Route::get('/ticketplan','Customercontroller@ticketplan')->name('ticketplan');
-Route::get('/moviecheckout','Customercontroller@moviecheckout')->name('moviecheckout');
-Route::get('/seatplan','Customercontroller@seatplan')->name('seatplan');
-
+Route::get('/ticketplan/{id}','Customercontroller@ticketplan')->name('ticketplan');
+Route::get('/moviecheckout/{id}','Customercontroller@moviecheckout')->name('moviecheckout');
+Route::get('/seatplan/{id}','Customercontroller@seatplan')->name('seatplan');
+Route::post('/save/{id}','paymentController@save')->name('save');
+Route::get('/payment','paymentController@index')->name('payment');
+//Route::get('/ticketplan','Customercontroller@downloadPdf')->name('ticketplan');

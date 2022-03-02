@@ -22,6 +22,7 @@
                   <th>Release Date</th>
                   <th>Time</th>
                   <th>Image</th>
+                  <th>Update</th>
                   <th>Delete</th>
 
                 </tr>
@@ -37,7 +38,9 @@
                       <td>{{$item->date}} </td>
                       <td>{{$item->time}} </td>
                       <td><img src="{{asset('uploads/' . $item->file_path)}}" style="width: 200px; height:200px;" > </td>
+                      <td><a href="" class="btn btn-success">Update</a>
                       <td><a href="/delete/{{$item->id}}" class="btn btn-danger">Delete</a></td>
+                      </td>
 
                   </tr>
 

@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Models\Movie;
+use App\Models\payment;
 
+use \PDF;
 use Illuminate\Http\Request;
 
 class Customercontroller extends Controller
 {
     public function index()
     {
+
+
+
+
         return view('welcome');
     }
 
@@ -47,20 +53,38 @@ class Customercontroller extends Controller
 
     }
 
-    public function ticketplan()
+    public function ticketplan($id)
     {
-        return view('ticketplan');
+
+
+
+        return view('ticketplan',['data'=>Movie::find($id)]);
     }
 
-    public function seatplan()
+
+
+    public function seatplan($id)
     {
-        return view('seatplan');
+         //return view('seatplan');
+
+         return view('seatplan',['data' =>Movie::find($id)]);
     }
 
-    public function moviecheckout()
+
+
+    public function moviecheckout($id)
     {
-        return view('moviecheckout');
+
+        return view('moviecheckout',['data' =>Movie::find($id)]);
     }
+
+    // public function downloadPdf()
+    // {
+    //     $pdf = PDF::loadview('ticketplan');
+    //     return $pdf->download('ticketplan.pdf');
+    // }
+
+
 
 
 
